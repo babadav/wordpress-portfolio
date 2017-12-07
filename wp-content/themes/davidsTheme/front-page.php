@@ -1,25 +1,43 @@
 
 
 <?php get_header(); ?>
+  <!-- content goes here -->
+
+
+<div class="thumbnail-wrap">
+  <?php
+  $args = array(
+    'post_type' => 'projects',
+    'post_per_page' => -1,
+    'post_status' => 'publish'
+  );
+
+  $the_query = new WP_Query( $args );
+
+  // The Loop
+  if ( $the_query->have_posts() ) {
+    while ( $the_query->have_posts() ) {
+      $the_query->the_post(); 
+      $bgi = get_field('background_image');
+      ?>
+        <div class="thumbnail <?php the_field('class'); ?>" style="background-image: url(<?php echo $bgi; ?>); ">
+
+            <a href="<?php the_permalink(); ?>" class="thumbnail">
+              <?php the_title(); ?>
+            </a>
+          
+        </div>   
+<?php
+
+    }
+  /* Restore original Post Data */
+  wp_reset_postdata();
+    } else {
+  // no posts found
+  }
+?>  
+
+</div>
 
 <?php get_footer(); ?>
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-   
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-  </head>
-  <body>
-    
-
-    
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-  </body>
-</html>

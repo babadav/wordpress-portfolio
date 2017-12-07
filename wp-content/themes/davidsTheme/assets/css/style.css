@@ -1,0 +1,96 @@
+.page {
+  display: none; }
+
+body {
+  box-sizing: border-box;
+  background-image: url(../../assets/img/background-clouds.jpg); }
+
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  background-color: black; }
+  nav:active {
+    padding-bottom: 40vh; }
+    nav:active .inner-nav {
+      top: 0px; }
+  nav .inner-nav {
+    position: relative;
+    top: -100px; }
+  nav .hamburger {
+    width: 40px;
+    height: 40px;
+    color: white;
+    position: relative;
+    left: 40%;
+    top: 45px; }
+
+.thumbnail-wrap {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 5vh;
+  width: 97%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; }
+  .thumbnail-wrap .thumbnail {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    text-decoration: none;
+    font-size: 1.75rem;
+    transition: .3s;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; }
+    .thumbnail-wrap .thumbnail a {
+      align-items: center;
+      text-decoration: none;
+      color: #fff;
+      background-color: rgba(70, 70, 70, 0.9);
+      width: 100%;
+      padding: 15px 0;
+      opacity: 0;
+      z-index: -100;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 60%;
+      z-index: 0;
+      transition: .3s;
+      font-weight: 400;
+      letter-spacing: .85px;
+      font-size: 1.5rem;
+      position: absolute;
+      bottom: -30px; }
+    .thumbnail-wrap .thumbnail:hover a {
+      bottom: 0;
+      opacity: 1; }
+  .thumbnail-wrap .tesla-img, .thumbnail-wrap .smithsonian-img, .thumbnail-wrap .bakery-img, .thumbnail-wrap .zeppelin-img, .thumbnail-wrap .superhero-img, .thumbnail-wrap .smores-img {
+    width: 47%;
+    padding-bottom: 25%;
+    backgoround-position: center; }
+  .thumbnail-wrap .slipstream-img, .thumbnail-wrap .google-yelp-img {
+    width: 97%;
+    padding-bottom: 50%;
+    backgoround-position: center;
+    margin-top: 2.5%;
+    margin-bottom: 2.5%; }
+
+.single-page-wrap {
+  width: 97%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white; }
+  .single-page-wrap .large-thumb {
+    width: 60%; }
+    .single-page-wrap .large-thumb img {
+      width: 100%; }
+
+/*# sourceMappingURL=style.css.map */
