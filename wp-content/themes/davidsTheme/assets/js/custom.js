@@ -1,11 +1,31 @@
-console.log('Hello World');
+;(function($) {
+	$('.hamburger').on('click', function(){
+		if ( $('.inner-nav').hasClass('active') ) {
 
-// var burgerIcon = document.querySelector('.hamburger');
+			$('.inner-nav').toggleClass('active');
+		}
+		
+	})
 
-// burgerIcon.addEventListener('click', function(){
 
-// 	let navBar = document.querySelector('nav');
 
-// 	navBar.classList.add('active');
-// }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	})(jQuery);

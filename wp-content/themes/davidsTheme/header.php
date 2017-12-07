@@ -20,6 +20,8 @@
 			
 		</nav>
 		<p>david</p>
+
+		<?php wp_head(); ?>
 	</head>
 	<body>
 
