@@ -5,11 +5,17 @@
 		
 	
 		<nav>
+			
+			<a class="logo" href="http://dev.portfolio.com/"></a>
+			
+
+			<p class="nav-text">DAVID BABAYEV || WEB DEVELOPER</p>
+
 			<div class="inner-nav">
 				<ul>
-					<li><a href="">Work</a></li>
-					<li><a href="">About</a></li>
-					<li><a href="">Contact</a></li>
+					<li><a href="http://dev.portfolio.com/">Work</a></li>
+					<li><a href="http://dev.portfolio.com/about">About</a></li>
+					<li><a href="http://dev.portfolio.com/contact">Contact</a></li>
 					<li><a href="">Resume</a></li>
 				</ul>
 			</div>
@@ -19,7 +25,7 @@
 			</div>
 			
 		</nav>
-		<p>david</p>
+		
 
 		<?php wp_head(); ?>
 	</head>

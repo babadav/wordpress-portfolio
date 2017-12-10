@@ -1,12 +1,9 @@
-<?php// Template Name: about?>
+<?php// Template Name: contact?>
 
  <?php wp_head(); ?>
  <?php get_header(); ?>
-<div class="about-wrap">
-	<div class="about-thumb-wrap">
-		<img src="<?php the_field('about-image'); ?>" alt="">
-	</div>
 
+<div class="form">
 	<?php 
 		if ( have_posts() ) {
 		    while ( have_posts() ) {
@@ -15,13 +12,16 @@
 		    } // end while
 		} // end if
 	?>
-
-	
 </div>
- 
-		
-	
 
-	
 
-<?php get_footer(); ?>
+
+
+
+
+
+
+
+
+
+  <?php get_footer(); ?>

@@ -1,24 +1,17 @@
 ;(function($) {
+
+
+
 	$('.hamburger').on('click', function(){
-		if ( $('.inner-nav').hasClass('active') ) {
+			$('nav').toggleClass('nav-active')
+			console.log('');
 
-			$('.inner-nav').toggleClass('active');
-		}
+			
+		})
+	
+
 		
-	})
-
-
-
-
-
-
-
-
-
-
-
-
-
+	
 
 
 

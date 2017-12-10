@@ -22,7 +22,7 @@
 	?>
 	</p>
 
-	<a href="<?php the_field('project_url'); ?>"></a>
+	<a href="<?php the_field('project_url'); ?> " class="single-page-url">click to see full site</a>
 
 	
 </div>

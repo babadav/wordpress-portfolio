@@ -11,3 +11,10 @@ add_action( 'wp_enqueue_scripts', 'davids_scripts' );
 
 add_theme_support('menus');
 
+function wpb_add_google_fonts() {
+ 
+wp_enqueue_style( 'wpb-google-fonts', '="https://fonts.googleapis.com/css?family=Open+Sans', false ); 
+}
+ 
+add_action( 'wp_enqueue_scripts', 'wpb_add_google_fonts' );
+
